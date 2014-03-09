@@ -1,0 +1,31 @@
+
+<div>
+	<div>{{title}}</div>
+	<div>
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>School</th>
+					<th>Operation</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="p in peoples">
+					<td><a href="#/people/{{p.id}}">{{p.id}}</a></td>
+					<td>{{p.name}}</td>
+					<td>{{p.school}}</td>
+					<td>
+						<button ng-click="deletePeople(p.id)">{{p.id}}-Delete</button>
+						<a href="#/modify/{{p.id}}">{{p.id}}-Modify</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div>
+		<a href="#/add">add people</a>
+	</div>
+	
+</div>
